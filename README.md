@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://fanjiajia.cn" target="_blank">
-	<img src="https://i.loli.net/2021/05/08/zM3PYXlLsIC5Hpb.jpg" width="150px"/>
+	<img src="https://github.com/Numen-fan/BlogPicRepo/blob/master/img/logo.jpg" width="150px"/>
 </a>
 <p align="center">Numen.fan</p>
 </p>
@@ -14,6 +14,7 @@
 # Blog
 ## Android
 - [迁移AndroidX](https://github.com/Numen-fan/Blog/blob/master/Android/%E8%BF%81%E7%A7%BBAndroidX.md)
+- [Android—实现科大讯飞语音合成](https://github.com/Numen-fan/Blog/blob/master/Android/Android%E2%80%94%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90.md)
 ## 编程练习
 - 排序
   - [排序-冒泡排序](https://github.com/Numen-fan/Blog/blob/master/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/%E6%8E%92%E5%BA%8F-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.md)
