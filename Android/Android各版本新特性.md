@@ -40,5 +40,19 @@
 
 ## 7.0版本新特性—2016年（Nougat）
 
-
+1. 多窗口模式（分屏模式）
+   1. 进入多窗口的Activity生命周期变化，会先onDestroy销毁，随后重建，停在onPause状态。
+   2. 推出多窗口的Activity生命周期变化，接着上面onPause->onDestroy，随后正常重建。
+   3. 禁用多窗口模式：在manifest.xml中配置`android:resizeableActivity="false"`
+2. Data Server
+   1. 一种流量保护机制，启用Data Server后，系统将拦截后台应用的数据使用。
+3. 改进的Java8语言支持。
+   1. 支持java8，可以使用lambda表达式等。
+4. 自定义壁纸
+   1. 设置壁纸时，可以选择是设置桌面还是锁屏壁纸。
+5. 快捷回复
+   1. 在通知中快捷回复。
+6. 快速设置
+   1. 下拉通知栏顶部，有edit按钮，可以对菜单进行自定义添加、删除、拖动排序。
+7. 其它：Daydream VR、后台省点、Unicode 9支持和全新的emoji表情符号、Google Assistant。
 
