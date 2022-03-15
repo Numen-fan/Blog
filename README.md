@@ -1,9 +1,10 @@
 <p align="center">
 <a href="https://fanjiajia.cn" target="_blank">
-	<img src="https://github.com/Numen-fan/BlogPicRepo/blob/master/img/logo.jpg" width="150px"/>
+	<img src="https://github.com/Numen-fan/BlogPicRepo/blob/main/img/logo.jpg" width="150px"/>
 </a>
 <p align="center">Numen.fan</p>
 </p>
+
 
 <p align="center">
   <a href=""><img src="https://img.shields.io/badge/阅读-read-brightgreen.svg" alt="在线阅读"></a>
@@ -15,6 +16,8 @@
 ## Android
 - [迁移AndroidX](https://github.com/Numen-fan/Blog/blob/master/Android/%E8%BF%81%E7%A7%BBAndroidX.md)
 - [Android—实现科大讯飞语音合成](https://github.com/Numen-fan/Blog/blob/master/Android/Android%E2%80%94%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90.md)
+- [Android各版本新特性概要](https://github.com/Numen-fan/Blog/blob/master/Android/Android%E5%90%84%E7%89%88%E6%9C%AC%E6%96%B0%E7%89%B9%E6%80%A7.md)
+- [源码追踪—android:onClick](https://github.com/Numen-fan/Blog/blob/master/Android/%E6%BA%90%E7%A0%81%E8%BF%BD%E8%B8%AA%E2%80%94android:onClick.md)
 ## 编程练习
 - 排序
   - [排序-冒泡排序](https://github.com/Numen-fan/Blog/blob/master/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.md)
@@ -38,5 +41,6 @@
   - [编程练习-无重复字符的最长字串](https://github.com/Numen-fan/Blog/blob/master/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/%E5%88%B7%E9%A2%98/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%97%E4%B8%B2.md)
   - [编程练习-盛最多水的容器](https://github.com/Numen-fan/Blog/blob/master/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/%E5%88%B7%E9%A2%98/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8.md)
 # About Me
-## 我的主页：https://fanjiajia.cn
-## 简书：https://www.jianshu.com/u/96c572bc1602
+- 我的主页：https://fanjiajia.cn
+
+- 简书：https://www.jianshu.com/u/96c572bc1602
