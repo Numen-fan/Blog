@@ -52,7 +52,7 @@ public int hashCode() {
 }
 ```
 
-![image-20220719151836102](/Users/fanjiajia02/Library/Application Support/typora-user-images/image-20220719151836102.png)
+![](https://raw.githubusercontent.com/Numen-fan/BlogPicRepo/main/img/image-20220719151836102.png)
 
 从官方的说明来看，默认实现就是对对象的内存地址做一次转换得到一个int值。简单说就是和内存地址相关。
 
