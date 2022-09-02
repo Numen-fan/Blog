@@ -179,7 +179,7 @@ String text = NDKTools.getStringFromNDK();
 
 2. 运行效果
 
-![](https://raw.githubusercontent.com/Numen-fan/BlogPicRepo/main/img/20220901194345.png)
+![](https://raw.githubusercontent.com/Numen-fan/BlogPicRepo/main/img/20220902230431.png)
 
 ## 参考资料
 

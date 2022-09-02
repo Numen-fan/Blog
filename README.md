@@ -18,6 +18,7 @@
 - [Android—实现科大讯飞语音合成](https://github.com/Numen-fan/Blog/blob/master/Android/Android%E2%80%94%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%A4%A7%E8%AE%AF%E9%A3%9E%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90.md)
 - [Android各版本新特性概要](https://github.com/Numen-fan/Blog/blob/master/Android/Android%E5%90%84%E7%89%88%E6%9C%AC%E6%96%B0%E7%89%B9%E6%80%A7.md)
 - [源码追踪—android:onClick](https://github.com/Numen-fan/Blog/blob/master/Android/%E6%BA%90%E7%A0%81%E8%BF%BD%E8%B8%AA%E2%80%94android:onClick.md)
+- [NDK开发—Hello World](https://github.com/Numen-fan/Blog/blob/master/Android/NDK%E5%BC%80%E5%8F%91%E2%80%94HelloWorld.md)
 ## 编程练习
 - 排序
   - [排序-冒泡排序](https://github.com/Numen-fan/Blog/blob/master/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.md)
