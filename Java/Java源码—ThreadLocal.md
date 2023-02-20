@@ -1,4 +1,4 @@
-# 源码阅读—ThreadLocal
+# Java源码—ThreadLocal
 
 ## 前言
 
@@ -214,7 +214,7 @@ private Entry getEntry(ThreadLocal<?> key) {
 
 1. `ThreadLocal`变量在赋值（set）和读取（get）的时候都先拿到了当前线程中的`ThreadLocalMap`对象，该对象是当前的线程的成员变量；这回答了`ThreadLocal`能够实现线程数据备份的原因。
 2. `ThreadLocalMap`并不是平时所说的Map结构，他是`ThreadLocal`的静态内部类；并且在其内部还定义了Entry数据结构和一个Entry数组。set和get都作用在这个数组之上。
-3. 今天简单的看了set和get方法，以及其中牵扯到的一些东西。其中还有许多其它值得探究的问题，比如内存泄漏，map中的value是强引用。还有hash计算等。
+3. 今天简单的看了set和get方法，以及其中牵扯到的一些东西。其中还有许多其它值得探究的问题，比如内存泄漏，map中的value是强引用。还有hash计算等。`ThreadLocal`中的内存泄露推荐[面试必备：ThreadLocal详解](https://juejin.cn/post/7126708538440679460)
 
 
 
