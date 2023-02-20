@@ -210,11 +210,13 @@ public class ScreenOrientationDetector extends OrientationEventListener {
 
 注意这里有一个`initOrientation` 方法，这个后面会讲，它在什么场景下会被调用。
 
+这里角度要适当的微调，结合实际，做到最佳效果。
+
 ### 3.3 使用
 
 这里我们用一个Activity来实现一下 ，功能很简单，在页面上放了一个按钮，点击后，切换横竖屏就好了。
 
-```
+```java
 public class OrientationActivity extends BaseActivity implements ScreenRotationSettingObserver.ScreenRotationSettingListener,
         ScreenOrientationDetector.OrientationChangeListener {
 
