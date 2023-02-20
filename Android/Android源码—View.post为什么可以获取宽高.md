@@ -229,6 +229,4 @@ public void executeActions(Handler handler) {
 1. onCreate和onResume中无法获取View的宽高，是因为还没执行View的绘制流程。
 2. view.post之所以能够拿到宽高，是因为在绘制之前，会将获取宽高的任务放到Handler的消息队列，等到View的绘制结束之后，便会执行。
 
-## 参考资料
-
-1. https://cloud.tencent.com/developer/article/1870415
+> 水平有限，若有不当，请指出！！！

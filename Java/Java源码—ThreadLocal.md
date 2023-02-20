@@ -216,7 +216,7 @@ private Entry getEntry(ThreadLocal<?> key) {
 2. `ThreadLocalMap`并不是平时所说的Map结构，他是`ThreadLocal`的静态内部类；并且在其内部还定义了Entry数据结构和一个Entry数组。set和get都作用在这个数组之上。
 3. 今天简单的看了set和get方法，以及其中牵扯到的一些东西。其中还有许多其它值得探究的问题，比如内存泄漏，map中的value是强引用。还有hash计算等。`ThreadLocal`中的内存泄露推荐[面试必备：ThreadLocal详解](https://juejin.cn/post/7126708538440679460)
 
-
+> 水平有限，若有不当，请指出！！！
 
 
 
