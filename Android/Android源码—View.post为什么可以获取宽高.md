@@ -146,9 +146,9 @@ onCreate流程中的`setContentView`只是解析了xml，初始化了`DecorView`
 
 post方法中，首先判断`attachInfo`成员变量是否为空，如果不为空，则直接加入到对应的Handler消息队列中。否则走`getRunQueue().post(action);`
 
-从Attach字面意思来理解，其实就可以知道，当View还没有attach时，才会拿到`mAttachInfo`, 因此我们在onResume或者onCreate中调用`view.post()`，其实走的是`getRunQueue().post(action)`。
+从Attach字面意思来理解，其实就可以知道，当View执行attach时，才会拿到`mAttachInfo`, 因此我们在onResume或者onCreate中调用`view.post()`，其实走的是`getRunQueue().post(action)`。
 
-收下我们看一下`mAttachInfo`在什么时机才会赋值。
+接下来我们看一下`mAttachInfo`在什么时机才会赋值。
 
 在`View.java`中
 
@@ -189,7 +189,7 @@ dispatch相信大家都不会陌生，分发；那么一定是从根布局上开
 
 再强调一遍，这个方法很长，内部很多信息，但其实总结来看，就是View的绘制流程，上面的【关键点2、3、4】。也就是这个方法执行完成之后，我们就能拿到View的宽高了；到这里，我们终于看到和View的宽高相关的东西了。
 
-但还没结束，我们post出去的任务，什么时候执行呢，上面host可以看成是跟布局，一个ViewGroup，通过一层一层的分发，最后我们看看View的`dispatchAttachedToWindow`方法。
+但还没结束，我们post出去的任务，什么时候执行呢，上面host可以看成是根布局，一个ViewGroup，通过一层一层的分发，最后我们看看View的`dispatchAttachedToWindow`方法。
 
 ```java
  void dispatchAttachedToWindow(AttachInfo info, int visibility) {
