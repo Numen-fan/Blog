@@ -1,4 +1,4 @@
-# Android源码—View.post为什么可以获取View宽高
+# Android源码—为什么onResume方法中不可以获取View的宽高
 
 ## 前言
 
