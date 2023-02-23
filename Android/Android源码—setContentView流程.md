@@ -196,9 +196,78 @@ public class DecorView extends FrameLayout implements RootViewSurfaceTaker, Wind
 
 ```
 
-这个方法很长，我们抓住我们关注的点
+这个方法很长，我们要抓住我们关注的重点，上面众多地方都在为`layoutResource`赋值（其实这个资源文件就是根据Activity的一些Theme加载），指向一个布局资源文件。来到【关键点5】`mDecor.onResourcesLoaded(mLayoutInflater, layoutResource);`
 
+```java
+void onResourcesLoaded(LayoutInflater inflater, int layoutResource) {
+        ……
+        mDecorCaptionView = createDecorCaptionView(inflater);
+  			// 加载layoutResource
+        final View root = inflater.inflate(layoutResource, null);
+        if (mDecorCaptionView != null) {
+            if (mDecorCaptionView.getParent() == null) {
+                addView(mDecorCaptionView,
+                        new ViewGroup.LayoutParams(MATCH_PARENT, MATCH_PARENT));
+            }
+            mDecorCaptionView.addView(root,
+                    new ViewGroup.MarginLayoutParams(MATCH_PARENT, MATCH_PARENT));
+        } else {
+          	// 加入到DecorView中
+            addView(root, 0, new ViewGroup.LayoutParams(MATCH_PARENT, MATCH_PARENT));
+        }
+        mContentRoot = (ViewGroup) root;
+        initializeElevation();
+    }
+```
 
+这里将`layoutResource`指定的资源文件加载，并添加到DecorView中，前面知道了DecorView是一个FrameLayout。
+
+接着看【关键点6】`ViewGroup contentParent = (ViewGroup)findViewById(ID_ANDROID_CONTENT);`其中`ID_ANDROID_CONTENT = com.android.internal.R.id.content;`有没有一种熟悉的味道，上面提到很多种`layoutResource`,我们来看一个具体的文件`R.layout.screen_simple`
+
+```xml
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <ViewStub android:id="@+id/action_mode_bar_stub"
+              android:inflatedId="@+id/action_mode_bar"
+              android:layout="@layout/action_mode_bar"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:theme="?attr/actionBarTheme" />
+    <FrameLayout
+         android:id="@android:id/content"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:foregroundInsidePadding="false"
+         android:foregroundGravity="fill_horizontal|top"
+         android:foreground="?android:attr/windowContentOverlay" />
+</LinearLayout>
+```
+
+这是一个系统的资源文件，根布局是一个LinearLayout，其中有一个`android:id="@android:id/content"`。
+
+所以这里应该要清楚`mDecor.onResourcesLoaded(mLayoutInflater, layoutResource);`中其实就是将这样一个资源文件添加到了DecorView。
+
+【关键点6】是拿到了`android:id="@android:id/content"`这个FrameLayout，看它的命名意思就很明显了，会将我们自己写的布局文件加载到这个FrameLayout中，那么最后来看看在哪里添加的吧。
+
+让我们把目光定位到【关键点2】吧`mLayoutInflater.inflate(layoutResID, mContentParent);`。这一步完成了我们自己写的布局资源文件加载。
+
+到这里我们再回头看看本文开头那张图，整个结构就清楚了。
+
+我们可以再细化一下。
+
+![](https://raw.githubusercontent.com/Numen-fan/BlogPicRepo/main/img/20230223000611.png)
+
+## 结论
+
+1. Activity的setContentView，其实是交给PhoneWindow执行。
+2. PhoneWindow持有一个DecorView。
+3. DecorView是FrameLayout的一个子类。
+4. 根据Activity的Theme加载不同的资源文件到DecorView中，这个资源文件中都会有一个id为`R.id.content`的FrameLayout，用于加载我们自己写的布局文件。
+
+> 水平有限，有不当之处，请指出。
 
 
 
