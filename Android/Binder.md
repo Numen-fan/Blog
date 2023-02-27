@@ -1,0 +1,3 @@
+新建的AIDL文件，内部声明一些接口方法，通过build，会生成一个同名文件，其内部有一个抽象类，Stub，其继承了Binder，并实现了AIDL接口。
+
+在服务端进程中的Service，bind之后返回Binder，这个Binder就是一个Stub。客户端在bind之后拿到这个IBinder, 通过调用asInterface转为AIDL接口实例，从而可以调用相应的方法。
