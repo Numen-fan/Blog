@@ -1,5 +1,9 @@
 # Android源码-Activity启动流程
 
+Activity的生命周期用到了模板的设计模式；
+
+
+
 在ActivityThread中
 
 ```
